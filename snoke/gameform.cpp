@@ -10,6 +10,8 @@ GameForm::GameForm(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::GameForm)
 {
+
+    this->setFocus();
     //huodelujing
     //QString applicationDirPath;
     applicationDirPath = QCoreApplication::applicationDirPath();
@@ -26,7 +28,7 @@ GameForm::GameForm(QWidget *parent) :
     QString back3 = applicationDirPath + "/img/back3.png";
 
     pal.setBrush(QPalette::Background,QBrush(QPixmap(back3).scaled(this->size())));
-    //F:/C++/QT/snoke/back3.png
+
     this->setPalette(pal);
 
 
@@ -246,6 +248,7 @@ void GameForm:: sjd()
     //计算坐标以后，在根据新的坐标在画一次。
 
     this->update();
+    this->setFocus();//每次更新完以后，使得主界面重新获得焦点，以便捕捉到方向键
 }
 
 GameForm::~GameForm()
@@ -263,6 +266,7 @@ void GameForm::on_btnsta_clicked(bool checked)
     tme->start(time);
     ui->btnsta->setVisible(false);
     ui->btnstop->setVisible(true);
+
 }
 
 void GameForm::on_btntop_clicked(bool checked)
@@ -298,36 +302,26 @@ void GameForm::keyPressEvent(QKeyEvent *k)
 {
     switch(k->key())
     {
-
-//    case Qt::Key_Up :
-//        fx = 0;
-//        break;
-//    case Qt::Key_Down:
-//        fx = 1;
-//        break;
-//    case Qt::Key_Left:
-//        fx = 2;
-//        break;
-//    case Qt::Key_Right:
-//        fx = 3;
-//        break;
-
-
+    case Qt::Key_Up:
     case Qt::Key_W :
         fx = 0;
         break;
-    case Qt::Key_S:
+    case Qt::Key_Down:
+    case Qt::Key_S   :
         fx = 1;
         break;
-    case Qt::Key_A:
+    case Qt::Key_Left:
+    case Qt::Key_A   :
         fx = 2;
         break;
-    case Qt::Key_D:
+    case Qt::Key_Right:
+    case Qt::Key_D    :
         fx = 3;
         break;
-
     }
 }
+
+
 
 
 
