@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>snoke</file>
+        <file>ex .png</file>
+        <file>st.png</file>
+        <file>but.png</file>
+        <file>lef.png</file>
+        <file>rig.png</file>
+        <file>top.png</file>
+    </qresource>
+</RCC>
