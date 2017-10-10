@@ -299,19 +299,19 @@ void GameForm::keyPressEvent(QKeyEvent *k)
     switch(k->key())
     {
 
-    case Qt::Key_Up :
-        fx = 0;
-        break;
-    case Qt::Key_Down:
-        fx = 1;
-        break;
-    case Qt::Key_Left:
-        fx = 2;
-        break;
-    case Qt::Key_Right:
-        fx = 3;
-        break;
-    /*
+//    case Qt::Key_Up :
+//        fx = 0;
+//        break;
+//    case Qt::Key_Down:
+//        fx = 1;
+//        break;
+//    case Qt::Key_Left:
+//        fx = 2;
+//        break;
+//    case Qt::Key_Right:
+//        fx = 3;
+//        break;
+
 
     case Qt::Key_W :
         fx = 0;
@@ -325,7 +325,7 @@ void GameForm::keyPressEvent(QKeyEvent *k)
     case Qt::Key_D:
         fx = 3;
         break;
-        */
+
     }
 }
 
