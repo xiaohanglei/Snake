@@ -7,8 +7,8 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Widget w;
-    qDebug()<<QDir::currentPath();
+
+    Widget w;//显示开始界面
     w.show();
 
     return a.exec();
