@@ -10,6 +10,8 @@ int main(int argc, char *argv[])
 
     Widget w;//显示开始界面
     w.show();
+	
+	//不应该啊 
 
     return a.exec();
 }
